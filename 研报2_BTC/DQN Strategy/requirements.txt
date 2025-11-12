@@ -1,0 +1,8 @@
+pandas>=1.3.0
+numpy>=1.21.0
+torch>=1.9.0
+matplotlib>=3.4.0
+gym>=0.21.0
+
+# 可选：用于实时可视化训练过程
+# visdom>=0.1.8

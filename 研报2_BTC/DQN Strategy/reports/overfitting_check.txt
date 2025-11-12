@@ -1,0 +1,48 @@
+
+=== Overfitting Check Report ===
+
+1. Training vs Testing Performance
+
+Note: Full overfitting analysis requires storing training set performance 
+during model training. Current implementation focuses on test set evaluation.
+
+Recommended checks:
+- Compare Sharpe ratios: Training vs Testing
+- Compare cumulative returns: Training vs Testing  
+- Analyze performance degradation
+- Check if model generalizes well
+
+2. Model Complexity Analysis
+
+Network Architecture:
+- Input: 20 features
+- Hidden Layer 1: 128 units + BatchNorm + ReLU
+- Hidden Layer 2: 256 units + BatchNorm + ReLU
+- Output: 3 actions + Softmax
+
+Total Parameters: ~33,000
+
+Regularization Methods:
+- Target network (updated every 300 steps)
+- Experience replay (memory size: 128)
+- Epsilon-greedy exploration (decay from 0.9 to 0.05)
+- BatchNorm layers
+
+3. Data Split Strategy
+
+Training Period: 2018-01-01 to 2022-01-01 (4 years)
+Testing Period: 2022-01-01 to 2024-12-31 (3 years)
+
+Split Method: Time-based (no shuffling)
+Leakage Prevention: Expanding window for Z-score, look-back features
+
+4. Conclusion
+
+The model design includes several anti-overfitting mechanisms:
+✓ Target network prevents moving target problem
+✓ Experience replay reduces correlation
+✓ Time-based validation ensures no leakage
+✓ Reasonable model complexity for data size
+
+Test set performance should be evaluated against buy-and-hold baseline
+to assess practical value and generalization capability.

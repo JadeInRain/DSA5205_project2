@@ -1,0 +1,9 @@
+Metric,Strategy,Benchmark
+Volatility (Annual),47.42%,52.34%
+Max Drawdown,-74.75%,-67.21%
+Sharpe Ratio,0.558,0.697
+Sortino Ratio,0.657,0.908
+Calmar Ratio,0.220,0.381
+VaR (95%),-1.53%,-1.74%
+CVaR (95%),-2.51%,-2.72%
+Win Rate,40.09%,51.25%
