@@ -1,0 +1,15 @@
+# Core scientific computing
+numpy>=1.24.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+
+# Machine learning
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+
+# Data handling
+scipy>=1.11.0
+
+# Optional but recommended for reproducibility
+seaborn>=0.12.0
+jupyter>=1.0.0
