@@ -21,7 +21,7 @@ from typing import List
 # ---------------------------
 # User-editable constants
 # ---------------------------
-INPUT_CSV = "btc_4h_factors.csv"    # 改成你的实际路径/文件名即可
+INPUT_CSV = "btc_4h_factors.csv"
 BAR_HOURS = 4
 HORIZON_DAYS = 7
 HORIZON_BARS = (HORIZON_DAYS * 24) // BAR_HOURS  # 7天=42根4h
